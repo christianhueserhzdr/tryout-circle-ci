@@ -22,7 +22,7 @@ jobs:
       - mattermost-plugin-notify/status:
           failure_message: This very important job has failed!
           success_message: 'Life is beautiful, my job has succeeded!'
-          webhook: https://mattermost.hzdr.de
+          webhook: hzdr-mattermost-circleci-plugin
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
