@@ -31,3 +31,12 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+  your-workflow:
+    jobs:
+      - mattermost-plugin-notify/approval-notification:
+          message: Please @senior-developer approve this workflow
+          webhook: "$MM_WEBHOOK"
+      - approved:
+          requires:
+            - mattermost-plugin-notify/approval-notification
+          type: approval
